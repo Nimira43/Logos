@@ -1,17 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
+:root {
+  --main: #ff4500;
+  --dark: #111;
+  --light: #fffdfa;
+  --grey-1: #333;
+  --grey-2: #999;
+  --grey-3: #ccc;
+  --grey-4: #eee;
+  --grey-5: #f1f1f1;
 }
 
-html,
-body,
-#app {
-  min-height: 100%;
+* { 
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
-body {
-  margin: 0;
+.text-logo {
+  font-family: 'Micro 5', sans-serif;
 }
 
+.transitioning {
+  transition: all 0.5s ease-in-out;
+}
+
+.text-main {
+  color: var(--main);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-grey-1 {
+  color: var(--grey-1);
+}
+
+.text-grey-2 {
+  color: var(--grey-2);
+}
+
+.text-grey-3 {
+  color: var(--grey-3);
+}
+
+.text-grey-4 {
+  color: var(--grey-4);
+}
+
+.text-grey-5 {
+  color: var(--grey-5);
+}
+
+/* BACKGROUND COLOURS */
+.bg-main {
+  background-color: var(--main);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-grey-1 {
+  background-color: var(--grey-1);
+}
+
+.bg-grey-2 {
+  background-color: var(--grey-2);
+}
+
+.bg-grey-3 {
+  background-color: var(--grey-3);
+}
+
+.bg-grey-4 {
+  background-color: var(--grey-4);
+}
+
+.bg-grey-5 {
+  background-color: var(--grey-5);
+}
