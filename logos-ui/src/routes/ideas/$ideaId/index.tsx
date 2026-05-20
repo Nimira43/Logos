@@ -1,11 +1,46 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
+import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
+import type { Idea } from '#/types'
 
-export const Route = createFileRoute('/ideas/$ideaId/')({
-  component: IdeaDetailsPage
-  ,
+const fetchIdea = async (ideaId: string): Promise<Idea> => {
+  const res = await fetch(`/api/ideas/${ideaId}`)
+
+  if (!res.ok) throw new Error('Failed to fetch data.')
+
+  return res.json()
+}
+
+const ideaQueryOptions = (ideaId: string) => queryOptions({
+  queryKey: ['idea', ideaId],
+  queryFn: () => fetchIdea(ideaId)
 })
 
-function IdeaDetailsPage
-() {
-  return <div>Hello "/ideas/$ideaId/"!</div>
+export const Route = createFileRoute('/ideas/$ideaId/')({
+  component: IdeaDetailsPage,
+  loader: async ({ params, context: { queryClient } }) => {
+    return queryClient.ensureQueryData(ideaQueryOptions(params.ideaId))
+  }
+})
+
+function IdeaDetailsPage() {
+  const { ideaId } = Route.useParams()
+
+  const { data: idea} = useSuspenseQuery(ideaQueryOptions(ideaId))
+  return (
+    <div className='p-4'>
+      <h1 className='flex text-6xl text-logo text-amber-600 mb-5'>Logos</h1>
+      <Link
+        to='/ideas'
+        className='text-amber-600 block mb-4 hover:text-amber-500 uppercase' 
+      >
+        Back
+      </Link>
+      <h2 className='text-2xl font-medium'>
+        {idea.title}
+      </h2>
+      <p className='mt-2'>
+        {idea.description}
+      </p>
+    </div>
+  )
 }
