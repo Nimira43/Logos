@@ -1,13 +1,11 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
 import type { Idea } from '#/types'
+import api from '#/lib/axios'
 
 const fetchIdea = async (ideaId: string): Promise<Idea> => {
-  const res = await fetch(`/api/ideas/${ideaId}`)
-
-  if (!res.ok) throw new Error('Failed to fetch data.')
-
-  return res.json()
+  const res = await api.get(`/ideas/${ideaId}`)
+  return res.data
 }
 
 const ideaQueryOptions = (ideaId: string) => queryOptions({
@@ -28,12 +26,16 @@ function IdeaDetailsPage() {
   const { data: idea} = useSuspenseQuery(ideaQueryOptions(ideaId))
   return (
     <div className='p-4'>
-      <h1 className='flex text-6xl text-logo text-amber-600 mb-5'>Logos</h1>
+      <h1 className='flex text-6xl text-logo text-amber-600 mb-5'>
+        Logos
+      </h1>
       <Link
         to='/ideas'
-        className='text-amber-600 block mb-4 hover:text-amber-500 uppercase' 
+        className='text-amber-600 block mb-4 hover:text-amber-500 uppercase transitioning' 
       >
-        Back
+        <span className='font-medium'>
+          Back
+        </span>
       </Link>
       <h2 className='text-2xl font-medium'>
         {idea.title}

@@ -2,17 +2,6 @@
 
 @import "tailwindcss";
 
-:root {
-  --main: #ff4500;
-  --dark: #111;
-  --light: #fffdfa;
-  --grey-1: #333;
-  --grey-2: #999;
-  --grey-3: #ccc;
-  --grey-4: #eee;
-  --grey-5: #f1f1f1;
-}
-
 * { 
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -24,69 +13,4 @@
 
 .transitioning {
   transition: all 0.5s ease-in-out;
-}
-
-.text-main {
-  color: var(--main);
-}
-
-.text-dark {
-  color: var(--dark);
-}
-
-.text-light {
-  color: var(--light);
-}
-
-.text-grey-1 {
-  color: var(--grey-1);
-}
-
-.text-grey-2 {
-  color: var(--grey-2);
-}
-
-.text-grey-3 {
-  color: var(--grey-3);
-}
-
-.text-grey-4 {
-  color: var(--grey-4);
-}
-
-.text-grey-5 {
-  color: var(--grey-5);
-}
-
-/* BACKGROUND COLOURS */
-.bg-main {
-  background-color: var(--main);
-}
-
-.bg-dark {
-  background-color: var(--dark);
-}
-
-.bg-light {
-  background-color: var(--light);
-}
-
-.bg-grey-1 {
-  background-color: var(--grey-1);
-}
-
-.bg-grey-2 {
-  background-color: var(--grey-2);
-}
-
-.bg-grey-3 {
-  background-color: var(--grey-3);
-}
-
-.bg-grey-4 {
-  background-color: var(--grey-4);
-}
-
-.bg-grey-5 {
-  background-color: var(--grey-5);
 }
