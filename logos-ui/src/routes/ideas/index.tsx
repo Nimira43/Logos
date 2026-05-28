@@ -28,9 +28,7 @@ function IdeasPage() {
 
   return (
     <div className='p-4'>
-      <h1 className='flex text-4xl text-logo text-amber-600 mb-4'>
-        Logos
-      </h1>
+      
       <ul className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
         {ideas.map((idea) => (
           <li

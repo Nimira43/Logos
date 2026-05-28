@@ -7,6 +7,7 @@ import {
   createRootRouteWithContext
 } from '@tanstack/react-router'
 import '../styles.css'
+import Header from '#/components/Header'
 
 type RouterContext = {
   queryClient: QueryClient
@@ -29,9 +30,14 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 
 function RootComponent() {
   return (
-    <>
+    <div className='min-h-screen bg-amber-50 flex flex-col'>
       <HeadContent />
-      <Outlet />
+      <Header />
+      <main className='flex justify-center p-6'>
+        <div className='w-full max-w-4xl bg-white rounded shadow p-8'>
+          <Outlet />    
+        </div>
+      </main>
       <TanStackDevtools
         config={{
           position: 'bottom-right',
@@ -43,6 +49,8 @@ function RootComponent() {
           },
         ]}
       />
-    </>
+    </div>
   )
 }
+
+

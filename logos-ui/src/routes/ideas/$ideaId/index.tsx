@@ -26,9 +26,6 @@ function IdeaDetailsPage() {
   const { data: idea} = useSuspenseQuery(ideaQueryOptions(ideaId))
   return (
     <div className='p-4'>
-      <h1 className='flex text-6xl text-logo text-amber-600 mb-5'>
-        Logos
-      </h1>
       <Link
         to='/ideas'
         className='text-amber-600 block mb-4 hover:text-amber-500 uppercase transitioning' 
