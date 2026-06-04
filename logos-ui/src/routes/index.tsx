@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
-import { fetchIdeas } from '#/api/ideas'
+import { fetchIdeas } from '@/api/ideas'
+import IdeaCard from '@/components/IdeaCard'
 
 const latestIdeasQueryOptions = () =>
   queryOptions({
@@ -48,29 +49,15 @@ function Home() {
           Latest Ideas
         </h2>
 
-        <ul className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
           {latestIdeas.map((idea) => (
-            <li
+            <IdeaCard
               key={idea.id}
-              className='border border-amber-300 p-4 rounded shadow-sm bg-white'
-            >
-              <h3 className='text-lg font-medium text-amber-600'>
-                {idea.title}
-              </h3>
-              <p className='text-gray-700 mt-2'>
-                {idea.summary}
-              </p>
-
-              <Link
-                to='/ideas/$ideaId'
-                params={{ ideaId: idea.id.toString() }}
-                className='inline-block mt-4 px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-500 transition uppercase text-sm'
-              >
-                View Idea
-              </Link>
-            </li>
+              idea={idea}
+              button={false}      
+            />
           ))}
-        </ul>
+        </div>
 
         <div className='text-center mt-10'>
           <Link

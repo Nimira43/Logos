@@ -22,7 +22,7 @@ function IdeaDetailsPage() {
     <div className='p-4'>
       <Link
         to='/ideas'
-        className='text-amber-600 block mb-4 hover:text-amber-500 uppercase transitioning' 
+        className='text-black block mb-4 hover:text-amber-600 uppercase transitioning' 
       >
         <span className='font-medium'>
           Back
