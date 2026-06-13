@@ -1,6 +1,8 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
 import { useState } from 'react'
+import { useMutation } from '@tanstack/react-query'
 import type { Idea } from '#/types'
+import { createIdea } from '#/api/ideas'
 
 export const Route = createFileRoute('/ideas/new/')({
   component: NewIdeaPage,
@@ -13,10 +15,42 @@ function NewIdeaPage() {
   const [description, setDescription] = useState('')
   const [tags, setTags] = useState('')
 
+  const { mutateAsync, isPending } = useMutation({
+    mutationFn: createIdea,
+    onSuccess: () => {
+      navigate({to: '/ideas'})
+    }
+  })
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!title.trim() || !summary.trim() || !description.trim()) {
+      alert('Please fill in all fields.')
+      return
+    }
+
+    try {
+      await mutateAsync({
+        title,
+        summary,
+        description,
+        tags: tags
+          .split(',')
+          .map((tag) => tag.trim())
+          .filter((tag) => tag !== '')
+      })
+    } catch (error) {
+      console.error(error)
+      alert('Something went wrong.')
+    }
+  }
+
   return (
     <div className='space-y-4'>
-      <h1 className='text-amber-600 text-3xl text-center font-medium mb-6'>Create New Idea</h1>
-      <form className='space-y-2'>
+      <form
+        onSubmit={handleSubmit}
+        className='space-y-2'>
         <div>
           <label
             htmlFor='title'
@@ -56,7 +90,7 @@ function NewIdeaPage() {
           </label>
           <textarea
             id='body'
-            value={summary}
+            value={description}
             rows={6}
             onChange={(e) => setDescription(e.target.value)}
             className='w-full p-2 border border-grey-400 focus:border-amber-600 hover:border-amber-500 outline-none transitioning rounded'
@@ -80,9 +114,10 @@ function NewIdeaPage() {
         <div className='mt-5'>
           <button
             type='submit'
+            disabled={isPending}
             className='block w-full bg-amber-600 hover:bg-amber-500 text-white transitioning font-medium rounded px-6 py-2 uppercase disabled:opacity-50 disabled:cursor-not-allowed'
           >
-            Submit
+            {isPending ? 'Creating...' : 'Create Idea'}
           </button>
         </div>
       </form>

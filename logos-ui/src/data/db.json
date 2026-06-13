@@ -5,7 +5,11 @@
       "title": "Community Storage Network",
       "summary": "A platform for renting secure storage space from local residents.",
       "description": "A service enabling individuals to rent out unused space such as lofts, garages, and spare rooms for storage. The platform manages bookings, payments, and optional insurance, providing a cost-effective alternative to commercial storage facilities while supporting local communities.",
-      "tags": ["storage", "local", "marketplace"],
+      "tags": [
+        "storage",
+        "local",
+        "marketplace"
+      ],
       "createdAt": "2026-03-07T16:40:00.000Z"
     },
     {
@@ -13,7 +17,11 @@
       "title": "Regional Produce Subscription",
       "summary": "Weekly deliveries of seasonal produce from nearby farms.",
       "description": "A subscription service connecting consumers with regional farmers. Each delivery contains fresh, seasonal produce sourced directly from local growers. The service promotes sustainable agriculture, reduces food miles, and supports independent farms across the UK.",
-      "tags": ["subscription", "food", "local"],
+      "tags": [
+        "subscription",
+        "food",
+        "local"
+      ],
       "createdAt": "2026-02-12T12:25:00.000Z"
     },
     {
@@ -21,7 +29,11 @@
       "title": "Freelance Operations Suite",
       "summary": "A streamlined management tool for UK self-employed professionals.",
       "description": "A lightweight platform designed to help freelancers manage invoicing, expenses, client records, and tax preparation. Tailored to UK regulations, it includes HMRC deadline reminders, income forecasting, and simple reporting tools suitable for sole traders.",
-      "tags": ["freelance", "saas", "productivity"],
+      "tags": [
+        "freelance",
+        "saas",
+        "productivity"
+      ],
       "createdAt": "2026-04-23T10:37:00.000Z"
     },
     {
@@ -29,7 +41,11 @@
       "title": "Digital Wardrobe Manager",
       "summary": "A system for cataloguing clothing and planning outfits.",
       "description": "An application that allows users to photograph and organise their clothing into a digital wardrobe. The system provides outfit suggestions based on weather forecasts, calendar events, and personal preferences. Additional features include packing lists and wardrobe usage analytics.",
-      "tags": ["fashion", "ai", "lifestyle"],
+      "tags": [
+        "fashion",
+        "ai",
+        "lifestyle"
+      ],
       "createdAt": "2026-01-17T19:34:00.000Z"
     },
     {
@@ -37,7 +53,11 @@
       "title": "Verified Pet Care Platform",
       "summary": "A trusted marketplace for pet sitting and dog walking.",
       "description": "A UK-focused platform connecting pet owners with vetted carers offering sitting, boarding, and walking services. Providers undergo identity and background checks, and the platform includes secure messaging, booking management, and transparent reviews.",
-      "tags": ["pets", "marketplace", "local"],
+      "tags": [
+        "pets",
+        "marketplace",
+        "local"
+      ],
       "createdAt": "2026-03-20T13:05:00.000Z"
     },
     {
@@ -45,7 +65,11 @@
       "title": "Remote Work Matchmaker",
       "summary": "AI-driven recommendations for remote job opportunities.",
       "description": "A service that analyses a user's professional profiles, portfolio, and CV to identify suitable remote roles. The system learns from user interactions to refine recommendations and includes filters for UK-specific requirements such as right-to-work and salary expectations.",
-      "tags": ["jobs", "ai", "remote"],
+      "tags": [
+        "jobs",
+        "ai",
+        "remote"
+      ],
       "createdAt": "2026-04-29T16:53:00.000Z"
     },
     {
@@ -53,7 +77,11 @@
       "title": "Independent Retail Hub",
       "summary": "A digital storefront solution for small high street businesses.",
       "description": "A platform enabling independent retailers to list products online without the complexity of building a full e-commerce site. Customers can browse local shops, reserve items, and arrange collection or local delivery. Designed to support high street resilience and visibility.",
-      "tags": ["retail", "local", "marketplace"],
+      "tags": [
+        "retail",
+        "local",
+        "marketplace"
+      ],
       "createdAt": "2026-05-03T15:28:00.000Z"
     },
     {
@@ -61,7 +89,11 @@
       "title": "Indoor Activity Finder",
       "summary": "Recommendations for indoor activities based on UK weather.",
       "description": "A location-aware application that suggests indoor activities when adverse weather is forecast. Options include museums, leisure centres, cafés, exhibitions, and family-friendly venues. The platform integrates availability, pricing, and travel information.",
-      "tags": ["lifestyle", "weather", "local"],
+      "tags": [
+        "lifestyle",
+        "weather",
+        "local"
+      ],
       "createdAt": "2026-05-10T18:48:00.000Z"
     },
     {
@@ -69,7 +101,11 @@
       "title": "Beginner Gardening Assistant",
       "summary": "Guidance for new gardeners based on UK climates.",
       "description": "A mobile app offering tailored gardening advice for beginners. It provides planting schedules, care instructions, and troubleshooting based on regional climate data. Features include plant identification, reminders, and guidance on common gardening challenges.",
-      "tags": ["gardening", "education", "lifestyle"],
+      "tags": [
+        "gardening",
+        "education",
+        "lifestyle"
+      ],
       "createdAt": "2026-03-23T10:14:00.000Z"
     },
     {
@@ -77,8 +113,23 @@
       "title": "Local Audio Tour Platform",
       "summary": "Self-guided walking tours narrated by regional experts.",
       "description": "A platform offering downloadable audio tours for towns and cities across the UK. Narration is provided by local historians, guides, and subject specialists. Each tour includes maps, points of interest, historical context, and optional recommendations for nearby amenities.",
-      "tags": ["travel", "culture", "local"],
+      "tags": [
+        "travel",
+        "culture",
+        "local"
+      ],
       "createdAt": "2026-03-06T15:32:00.000Z"
+    },
+    {
+      "title": "Star Wars Database",
+      "summary": "A database of Star Wars characters",
+      "description": "Database contains all the creatures and characters from the films, TV shows, books and other media.",
+      "tags": [
+        "Database"
+      ],
+      "createdAt": "2026-06-13T18:03:30.779Z",
+      "id": "vv4C3gsa5tE"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
