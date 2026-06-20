@@ -119,16 +119,6 @@
         "local"
       ],
       "createdAt": "2026-03-06T15:32:00.000Z"
-    },
-    {
-      "title": "Star Wars Database",
-      "summary": "A database of Star Wars characters",
-      "description": "Database contains all the creatures and characters from the films, TV shows, books and other media.",
-      "tags": [
-        "Database"
-      ],
-      "createdAt": "2026-06-13T18:03:30.779Z",
-      "id": "vv4C3gsa5tE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
