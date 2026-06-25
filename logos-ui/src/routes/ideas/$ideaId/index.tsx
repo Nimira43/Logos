@@ -40,9 +40,7 @@ function IdeaDetailsPage() {
         to='/ideas'
         className='text-black block mb-4 hover:text-amber-600 uppercase transitioning' 
       >
-        <span className='font-medium'>
-          Back
-        </span>
+        Back
       </Link>
       <h2 className='text-2xl font-medium'>
         {idea.title}
@@ -50,6 +48,13 @@ function IdeaDetailsPage() {
       <p className='mt-2'>
         {idea.description}
       </p>
+      <Link
+        to='/ideas/$ideaId/edit'
+        params={{ideaId}}
+        className='text-white bg-amber-600 text-center inline-block mt-4 px-4 py-2 rounded hover:bg-amber-500 transitioning uppercase disabled:opacity-50 mr-2'
+      >
+        Edit
+      </Link>
       <button
         onClick={handleDelete}
         disabled={isPending}

@@ -25,16 +25,15 @@
       "createdAt": "2026-02-12T12:25:00.000Z"
     },
     {
-      "id": "3",
       "title": "Freelance Operations Suite",
       "summary": "A streamlined management tool for UK self-employed professionals.",
-      "description": "A lightweight platform designed to help freelancers manage invoicing, expenses, client records, and tax preparation. Tailored to UK regulations, it includes HMRC deadline reminders, income forecasting, and simple reporting tools suitable for sole traders.",
+      "description": "A lightweight platform designed to help freelancers manage invoicing, expenses, client records, and tax preparation. Tailored to UK and European regulations, it includes HMRC deadline reminders, income forecasting, and simple reporting tools suitable for sole traders.",
       "tags": [
         "freelance",
         "saas",
         "productivity"
       ],
-      "createdAt": "2026-04-23T10:37:00.000Z"
+      "id": "3"
     },
     {
       "id": "4",
@@ -85,16 +84,15 @@
       "createdAt": "2026-05-03T15:28:00.000Z"
     },
     {
-      "id": "8",
       "title": "Indoor Activity Finder",
-      "summary": "Recommendations for indoor activities based on UK weather.",
+      "summary": "Recommendations for indoor activities",
       "description": "A location-aware application that suggests indoor activities when adverse weather is forecast. Options include museums, leisure centres, cafés, exhibitions, and family-friendly venues. The platform integrates availability, pricing, and travel information.",
       "tags": [
         "lifestyle",
         "weather",
         "local"
       ],
-      "createdAt": "2026-05-10T18:48:00.000Z"
+      "id": "8"
     },
     {
       "id": "9",
